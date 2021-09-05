@@ -1,0 +1,25 @@
+{
+  "name": "mediacollege/mvc-starter",
+  "description": "MVC Voorbeeld Code",
+  "type": "project",
+  "require": {
+    "pecee/simple-router": "^4.3",
+    "league/plates": "^3.4",
+    "ext-pdo": "*"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
+  },
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Hidde Braun",
+      "email": "h.braun@ma-web.nl"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Website\\Controllers\\": "_private/controllers/"
+    }
+  }
+}

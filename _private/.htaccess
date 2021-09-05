@@ -1,0 +1,5 @@
+# Dit .htaccess bestand geeft instructies aan de webserver
+# Het zorgt er voor dat de webserver directe toegang tot deze map nooit toestaat
+# Zo voorkom je dat mensen door je bestanden kunnen bladeren en gevoelige informatie kunnen zien (zoals je database wachtwoord)
+Order allow,deny
+Deny from all
