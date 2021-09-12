@@ -15,4 +15,4 @@
 /vendor
 
 # Ook onze gevoelige gegevens (usernames, passwords e.d.) NOOIT in Git
-/private/includes/config.php
+/_private/includes/config.php
