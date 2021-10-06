@@ -6,12 +6,15 @@ use Pecee\SimpleRouter\SimpleRouter;
 
 SimpleRouter::setDefaultNamespace( 'Website\Controllers' );
 
+
 SimpleRouter::group( [ 'prefix' => site_url() ], function () {
 
 	// START: Zet hier al eigen routes (alle URL's die je op je website hebt) en welke controller en functie deze pagina afhandelt
 	// Lees de docs, daar zie je hoe je routes kunt maken: https://github.com/skipperbent/simple-php-router#routes
 
 	SimpleRouter::get( '/', 'WebsiteController@home' )->name( 'home' );
+	SimpleRouter::get( '/aanmelden', 'RegistrationController@aanmelding' )->name( 'aanmelding' );
+	SimpleRouter::post( '/aanmeldencheck', 'RegistrationController@checkAanmelding' )->name( 'aanmelding.check' );
 
 
 
