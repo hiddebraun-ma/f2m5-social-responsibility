@@ -12,17 +12,19 @@
 	<?php endif; ?>
 </head>
 <body>
+<nav>
+    <h2>Logo</h2>
+        <?php if ( $this->section( 'navigation' ) ): ?>
+			<?php echo $this->section( 'navigation' ) ?>
+        <?php else: ?>
+			<?php echo $this->fetch( '_navigation' ) ?>
+		<?php endif ?>
+    </nav>
 <div class="container">
     <header>
         <h1>Social Responsibility</h1>
     </header>
-    <nav>
-		<?php if ( $this->section( 'navigation' ) ): ?>
-			<?php echo $this->section( 'navigation' ) ?>
-		<?php else: ?>
-			<?php echo $this->fetch( '_navigation' ) ?>
-		<?php endif ?>
-    </nav>
+   
     <main>
         <section class="content">
 			<?php echo $this->section( 'content' ) ?>

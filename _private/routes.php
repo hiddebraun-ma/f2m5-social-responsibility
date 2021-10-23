@@ -14,7 +14,7 @@ SimpleRouter::group( [ 'prefix' => site_url() ], function () {
 
 	SimpleRouter::get( '/', 'WebsiteController@home' )->name( 'home' );
 	SimpleRouter::get( '/aanmelden', 'RegistrationController@aanmelding' )->name( 'aanmelding' );
-	SimpleRouter::post( '/aanmeldencheck', 'RegistrationController@checkAanmelding' )->name( 'aanmelding.check' );
+	SimpleRouter::post( '/aanmelden/check', 'RegistrationController@checkAanmelding' )->name( 'aanmelding.check' );
 
 
 
