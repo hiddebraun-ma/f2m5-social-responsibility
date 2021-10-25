@@ -13,9 +13,21 @@ SimpleRouter::group( [ 'prefix' => site_url() ], function () {
 	// Lees de docs, daar zie je hoe je routes kunt maken: https://github.com/skipperbent/simple-php-router#routes
 
 	SimpleRouter::get( '/', 'WebsiteController@home' )->name( 'home' );
+
+	//aanmeld routes
 	SimpleRouter::get( '/aanmelden', 'RegistrationController@aanmelding' )->name( 'aanmelding' );
 	SimpleRouter::post( '/aanmelden/check', 'RegistrationController@checkAanmelding' )->name( 'aanmelding.check' );
+	SimpleRouter::get( '/aanmelden/bedankt', 'RegistrationController@bedanktAanmelding' )->name( 'aanmelding.bedankt' );
+	SimpleRouter::get( '/aanmelden/bevestigen/{code}', 'RegistrationController@confirmRegistration' )->name( 'register.name' );
 
+	//login routes
+	SimpleRouter::get( '/login', 'LoginController@loginForm' )->name( 'login.form' );
+	SimpleRouter::get( '/logout', 'LoginController@logout' )->name( 'logout' );
+	SimpleRouter::post( '/login/verwerken', 'LoginController@handleLoginForm' )->name( 'login.handle' );
+	SimpleRouter::get( '/ingelogd/dashboard', 'LoginController@userDashboard' )->name( 'login.dashboard');
+
+	//stuur mail
+	SimpleRouter::get( '/stuur-test-email', 'EmailController@sendTestEmail' )->name( 'email.test');
 
 
 

@@ -10,11 +10,11 @@
             <h2>Aanmelden</h2>
         <!-- <input type = "text" name = "voornaam" placeholder = "First name" required>*<br><br>
         <input type = "text" name = "achternaam" placeholder = "Last name" required>*<br><br> -->
-        <input type="email" name="email" placeholder="E-mail" value="<?php echo input('email')?>" required>*<br><br>
+        <input class="form-control" type="email" name="email" placeholder="E-mail" value="<?php echo input('email')?>" required>*<br>
         <?php if (isset ($errors['email'] ) ): ?>
             <?php echo $errors['email']; ?>
         <?php endif;?></br>
-        <input type="password" name="password" placeholder="Password" required>
+        <input class="form-control" type="password" name="password" placeholder="Password" required>
         <?php if (isset ($errors['password'] ) ): ?>
             <?php echo $errors['password']; ?>
             <?php endif;?>
